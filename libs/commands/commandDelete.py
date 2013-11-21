@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
-from libs.commands.commandIntrface import commandInterface
-from libs.saveload.storage import storage
+from libs.commands.commandInterface import commandInterface
 
 class commandDelete(commandInterface):
-    storage = None#häää??
+    
     def __init__(self):
         self.name = "delete"
-        self.storage = storage()#wozu?
+        super(commandDelete, self).__init__()
 
     def process(self,username,usernamenumber):
         

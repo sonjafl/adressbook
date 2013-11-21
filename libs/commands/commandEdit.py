@@ -1,12 +1,11 @@
 # -*- coding: utf-8 -*-
-from libs.commands.commandIntrface import commandInterface
-from libs.saveload.storage import storage
+from libs.commands.commandInterface import commandInterface
 
 class commandEdit(commandInterface):
-    storage = None#häää??
+
     def __init__(self):
         self.name = "edit"
-        self.storage = storage()#wozu?
+        super(commandEdit, self).__init__()
 
     def process(self,username,usernamenumber):
         

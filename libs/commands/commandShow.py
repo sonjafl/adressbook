@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
-from libs.commands.commandIntrface import commandInterface
-#from libs.saveload.storage import storage
-
-
+from libs.commands.commandInterface import commandInterface
 
 class commandShow(commandInterface):
     
-    
     def __init__(self):
         self.name = "show"
+        super(commandShow, self).__init__()
         
     def process(self,usercommand,usernamenumber):
         whattoshow = usernamenumber

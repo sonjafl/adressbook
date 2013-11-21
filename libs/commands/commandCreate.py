@@ -1,16 +1,11 @@
 # -*- coding: utf-8 -*-
-from libs.commands.commandIntrface import commandInterface
+from libs.commands.commandInterface import commandInterface
 import re
-#TODO:wieso kann ich nicht direkt save oder delete importieren?
-from libs.saveload.storage import storage
 
 class commandCreate(commandInterface):
-    #TODO:wozu das?
-    storage = None
     def __init__(self):
         self.name = "create"
-        #TODO:brauche ich das?
-        self.storage = storage()
+        super(commandCreate, self).__init__()
         
     def process(self, usercommand,usernamenumber):
         usernamenumber=usernamenumber.split()
